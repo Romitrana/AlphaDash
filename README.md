@@ -11,7 +11,7 @@
 - check the round of WPM working or not (for 2,3,5 minutes) ❌
 
 6. Running out of timer✅
-7. Restart ❌
+7. Restart ✅
 
 # on going pending work
 
