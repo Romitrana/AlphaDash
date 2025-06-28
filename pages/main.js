@@ -1,8 +1,8 @@
 import text from "../data.js";
 
 //game sounds
-const gameOver = new Audio("../sounds/gameOver.wav");
-const tiktik = new Audio("../sounds/clocktiktik.mp3");
+const gameOver = new Audio("../public/sounds/gameOver.wav");
+const tiktik = new Audio("../public/sounds/clocktiktik.mp3");
 
 //game status variables
 let wrongChar = 0;
@@ -53,7 +53,7 @@ const SecondE1 = document.getElementById("seconds");
 
 //theme change feature
 function changeTheme(idx) {
-  typeArea.style.backgroundImage = `url("../images/${arr[idx]}")`;
+  typeArea.style.backgroundImage = `url("../public/images/${arr[idx]}")`;
 }
 changeTheme(0);
 
@@ -161,7 +161,7 @@ window.addEventListener("keyup", (event) => {
   }
   const ignoredKeys = ["Shift", "Control", "Alt", "Meta", "CapsLock"];
   if (!ignoredKeys.includes(event.key) && timesup == false) {
-    const correctLetter = new Audio("../sounds/correctLetterSound.wav");
+    const correctLetter = new Audio("../public/sounds/correctLetterSound.wav");
     correctLetter.volume = 1;
     correctLetter.play();
     StartTyping(event.key);
@@ -226,7 +226,7 @@ function StartTyping(key) {
     // Wrong key pressed
     wrongChar++;
 
-    const wrongLetter = new Audio("../sounds/wrongLetterSound.wav");
+    const wrongLetter = new Audio("../public/sounds/wrongLetterSound.wav");
     wrongLetter.volume = 1;
     wrongLetter.play();
 
@@ -295,19 +295,19 @@ function timerCountDown() {
       modelWord.textContent = AverageWords;
       if (AverageWords <= 10) {
         //snail
-        modelIMG.src = "../images/snail.png";
+        modelIMG.src = "../public/images/snail.png";
       } else if (AverageWords >= 11 && AverageWords <= 20) {
         //turtle
-        modelIMG.src = "../images/turtle.png";
+        modelIMG.src = "../public/images/turtle.png";
       } else if (AverageWords >= 21 && AverageWords <= 30) {
         // rabbit
-        modelIMG.src = "../images/rabbit.png";
+        modelIMG.src = "../public/images/rabbit.png";
       } else if (AverageWords >= 31 && AverageWords <= 40) {
         //cheetaah
-        modelIMG.src = "../images/cheetah.png";
+        modelIMG.src = "../public/images/cheetah.png";
       } else {
         //falcon eagle
-        modelIMG.src = "../images/falconEagle.png";
+        modelIMG.src = "../public/images/falconEagle.png";
       }
     }
   }, 1000);
