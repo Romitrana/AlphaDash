@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="../favicon_io/favicon-16x16.png" />
+    <link rel="stylesheet" href="main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="main-container">
+       <img class="mainlogo" src="../images/myLogo.png" alt="mylogo">
+      <main class="content">
+        <aside class="left" id="wallpaper"></aside>
+        <aside class="right">
+          <div class="themes">
+            <img
+              src="../images/theme1.jpg"
+              alt="theme1"
+              id="t1"
+              onclick="changeTheme(0)"
+            />
+            <img
+              src="../images/theme2.jpg"
+              alt="theme2"
+              id="t2"
+              onclick="changeTheme(1)"
+            />
+            <img
+              src="../images/theme3.webp"
+              alt="theme3"
+              id="t3"
+              onclick="changeTheme(2)"
+            />
+            <img
+              src="../images/theme4.avif"
+              alt="theme4"
+              id="t4"
+              onclick="changeTheme(3)"
+            />
+            <img
+              src="../images/theme5.jpg"
+              alt="theme5"
+              id="t5"
+              onclick="changeTheme(4)"
+            />
+            <img
+              src="../images/theme6.jpg"
+              alt="theme6"
+              id="t6"
+              onclick="changeTheme(5)"
+            />
+            <img
+              src="../images/theme7.jpg"
+              alt="theme7"
+              id="t7"
+              onclick="changeTheme(6)"
+            />
+            <img
+              src="../images/theme8.jpg"
+              alt="theme8"
+              id="t8"
+              onclick="changeTheme(7)"
+            />
+            <img
+              src="../images/theme9.avif"
+              alt="theme9"
+              id="t9"
+              onclick="changeTheme(8)"
+            />
+            <img
+              src="../images/theme10.avif"
+              alt="theme10"
+              id="t10"
+              onclick="changeTheme(9)"
+            />
+            <img
+              src="../images/theme11.jpg"
+              alt="theme11"
+              id="t11"
+              onclick="changeTheme(10)"
+            />
+            <img
+              src="../images/theme12.avif"
+              alt="theme12"
+              id="t12"
+              onclick="changeTheme(11)"
+            />
+          </div>
+          <div class="font_size">
+            <div id="fsize1">S</div>
+            <div id="fsize2">M</div>
+            <div id="fsize3">L</div>
+            <select id="fontSelector">
+              <option value="Times New Roman">Times New Roman</option>
+              <option value="Arial">Arial</option>
+              <option value="Verdana">Verdana</option>
+              <option value="Tahoma">Tahoma</option>
+              <option value="Georgia">Georgia</option>
+              <option value="Courier New">Courier New</option>
+              <option value="Lucida Console">Lucida Console</option>
+              <option value="Trebuchet MS">Trebuchet MS</option>
+              <option value="Palatino Linotype">Palatino Linotype</option>
+              <option value="Comic Sans MS">Comic Sans MS</option>
+            </select>
+          </div>
+          <div class="score">
+            <span></span>
+            <p><i class="fa-regular fa-circle-dot"></i>STATUS</p>
+            <span></span>
+          </div>
+          <div class="livestatus">
+            <div id="timer">
+              <span id="minutes">00</span> :
+              <span id="seconds">00</span>
+            </div>
+            <div class="data">
+              <div>
+                <span class="datavalue" id="wordNumber">0</span>
+                <span>words</span>
+              </div>
+              <div>
+                <span class="datavalue" id="correctNumber">0</span>
+                <span>Correct</span>
+              </div>
+              <div>
+                <span class="datavalue" id="wrongNumber">0</span>
+                <span>wrong</span>
+              </div>
+              <div>
+                <span class="datavalue" id="AccuracyNumber">0</span>
+                <span>Accuracy</span>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </main>
+    </div>
+    <div id="model">
+      <img src="../images/snail.png" alt="badge" id="modelImg" />
+      <div class="model-right">
+        <h1>Typing Test Complete!</h1>
+        <p>You typed the <span id="TypingType"></span> Typing Test.</p>
+        <h4>
+          Your speed was &asymp;<span id="model-word"></span> WPM with
+          <span id="model-accuracy"></span> accuracy!
+        </h4>
+        <button id="restart">
+          Retake<i class="fa-solid fa-rotate-right"></i>
+        </button>
+        <span id="closeModel"><i class="fa-solid fa-xmark"></i></span>
+      </div>
+    </div>
+    <div id="overlay"></div>
+    <script src="../index.js" type="module"></script>
+    <script src="main.js" type="module"></script>
+  </body>
+</html>

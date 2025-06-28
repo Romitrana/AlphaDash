@@ -1,0 +1,121 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+body {
+  /* background-color: aquamarine; */
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.page1 {
+  /* border: 2px solid #333; */
+  width: 60%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  flex-direction: column;
+  border-radius: 10px;
+  background: #fff;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(255, 69, 0, 1) 100%
+  );
+  margin: 1rem;
+  box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.6);
+}
+
+.page1 .header-p {
+  height: 15%;
+  font-size: 3rem;
+  text-align: center;
+  padding: 1rem;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.page1 main {
+  height: auto;
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  width: 100%;
+}
+
+main div {
+  position: relative;
+  padding: 0.5rem;
+  height: auto;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0px 0px 17px 0px rgba(0, 0, 0, 0.67);
+  -webkit-box-shadow: 0px 0px 17px 0px rgba(0, 0, 0, 0.67);
+  -moz-box-shadow: 0px 0px 17px 0px rgba(0, 0, 0, 0.67);
+  transition: all 0.2s ease-in;
+}
+main div:hover {
+  scale: 1.04;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+}
+
+main div p {
+  height: 70%;
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 2rem 0.4rem 3rem 0.4rem;
+}
+main div p span {
+  display: block;
+  width: 100%;
+  color: #ff4500;
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+main div a {
+  display: block;
+  text-decoration: none;
+  position: absolute;
+  bottom: 0.5rem;
+  width: 90%;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-align: center;
+  background-color: orangered;
+  color: #fff;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+}
+main div a:hover {
+  background-color: black;
+  color: #fff;
+  transition: all 0.3s ease-in;
+}
+
+.fa-play {
+  margin-right: 0.4rem;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 650px) {
+  .page1 {
+    width: 90%;
+  }
+}
+
+
+#mylogo{
+  width: 20rem;
+}
