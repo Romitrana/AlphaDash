@@ -1,8 +1,8 @@
 import text from "../data.js";
 
 //game sounds
-const gameOver = new Audio("/sounds/gameOver.wav");
-const tiktik = new Audio("/sounds/clocktiktik.mp3");
+const gameOver = new Audio("../public/sounds/gameOver.wav");
+const tiktik = new Audio("../public/sounds/clocktiktik.mp3");
 
 //game status variables
 let wrongChar = 0;
@@ -72,8 +72,14 @@ function Initialize_Game() {
   let RegularWord = document.createElement("div");
   RegularWord.className = "word";
 
-  for (let i = 0; i < text[0].length; i++) {
-    const char = text[0][i];
+  //decide random index here.. last updated 25-08-2025
+  const n = text.length;
+  const randomIndex = Math.floor(Math.random() * n);
+  console.log(randomIndex);
+
+  //replace text[0] index with random index
+  for (let i = 0; i < text[randomIndex].length; i++) {
+    const char = text[randomIndex][i];
 
     if (char !== " ") {
       const CellDiv = document.createElement("div");
@@ -161,7 +167,7 @@ window.addEventListener("keyup", (event) => {
   }
   const ignoredKeys = ["Shift", "Control", "Alt", "Meta", "CapsLock"];
   if (!ignoredKeys.includes(event.key) && timesup == false) {
-    const correctLetter = new Audio("/sounds/correctLetterSound.wav");
+    const correctLetter = new Audio("../public/sounds/correctLetterSound.wav");
     correctLetter.volume = 1;
     correctLetter.play();
     StartTyping(event.key);
@@ -226,7 +232,7 @@ function StartTyping(key) {
     // Wrong key pressed
     wrongChar++;
 
-    const wrongLetter = new Audio("/sounds/wrongLetterSound.wav");
+    const wrongLetter = new Audio("../public/sounds/wrongLetterSound.wav");
     wrongLetter.volume = 1;
     wrongLetter.play();
 
